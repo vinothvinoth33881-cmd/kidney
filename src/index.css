@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background-color: #070D1E;
+  color: #F1F5F9;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Futuristic Medical Glow Effects */
+.glow-cyan {
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.2);
+}
+
+.glow-cyan-border {
+  border-color: rgba(0, 229, 255, 0.4);
+}
+
+.glow-card {
+  background: rgba(15, 26, 52, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(34, 53, 101, 0.7);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #070D1E;
+}
+::-webkit-scrollbar-thumb {
+  background: #1C2A54;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00E5FF;
+}
+
+/* Scanning Animation */
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+
+.animate-scanline {
+  animation: scanline 2.5s linear infinite;
+}
